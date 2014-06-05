@@ -3,7 +3,7 @@
 
 <h5><em>1st Place - Hack4Colorado 2014</em></h5>
 
-<img style="max-width:100%;" src="http://happygov.com/images/preview.jpg"/>
+<img style="max-width:100%;" src="http://happygov.com/images/previewimg.jpg"/>
 
 <p>HappyGov is a citizen satisfaction platform set out to bring citizens unique access to the service requests and issues that make up the Denver 3-1-1 central repository. We provide an advanced view of issues that are specific to a location or address, enabling access to public agency information and creating transparency within public agencies. Citizens have the freedom to vote on issues, complaints and requests in the system to establish a queue of high priority items that matter the most. For those unfamiliar, the existing 3-1-1 service request interface can be a challenge to find open requests, not to mention password and request id #’s often get lost. HappyGov has created an advanced view of preexisting 3-1-1 data by using Esri's ArcGis API to overlay 3-1-1 service requests with geo-location.</p>
 
