@@ -1,0 +1,51 @@
+// Intro
+#intro {
+	padding:6% 0;//$spacer;
+	font-size:1.5em;
+	position:relative;
+	color:white;
+	box-shadow:inset 0 4px 6px 0 $dark-grey;
+	@include responsive($ipadP) {}
+	&:before{
+		content:'';
+		opacity:0.8;
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		overflow: hidden;
+		background: url('../images/intro-bkgd.jpg') no-repeat center center fixed;
+		background-size:cover;
+		z-index: -1;
+		img {
+			width:auto;
+			height:auto;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	}
+	//@include responsive($ipadP) {padding:6% 8%;}
+	.wrapper {
+		width:90%;
+		max-width: 900px;
+		margin:0 auto;
+	}
+	.byline {
+		font-size:2.4em;
+		line-height: 1.15;
+		text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+		margin-bottom:0.7em;
+		@include font-os(400, italic);
+		@include responsive($ipadP) {font-size:1.5em;}
+	}
+	.button {
+		background:$red;
+		margin-top:1em;
+		&:hover {background:darken($red, 10%);}
+		@include responsive($ipadP) {
+			text-align: center;
+			line-height: 1.2;
+		}
+	}
+}

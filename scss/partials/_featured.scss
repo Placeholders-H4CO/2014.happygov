@@ -1,0 +1,101 @@
+/* Featured Module
+======================================================= */
+#featured {
+	background:white;
+	top:0;
+	left:0;
+	right:0;
+	@extend .cf;
+	&.sticky {position:fixed;}
+	> div {
+		width:(100% / 3) - ($spacer * 2);
+		padding:0 $spacer;
+		float:left;
+		vertical-align: top;
+		height:180px;
+		position: relative;
+		&:first-child, &:nth-child(2) {
+			box-shadow: inset -1px 0px 0 0 $grey;
+			@include responsive($ipadP) {width:(100% / 2) - ($spacer * 2);}
+			@include responsive($tabletP) {width:100% - ($spacer * 2);}
+		}
+		&:first-child {
+			@include responsive($ipadP) {box-shadow:inset -1px -1px 0 0 $grey;}
+		}
+		&:nth-child(2){
+			@include responsive($ipadP) {box-shadow:inset 0 -1px 0 0 $grey;}
+		}
+		&:last-child {
+			@include responsive($ipadP){width:100% - ($spacer * 2);}
+		}
+
+
+		// Widget Elements //
+		h3 {
+			margin:1.2em 0 1em;
+			span {
+				font-size:0.75em;
+				color:$grey;
+			}
+		}
+		// Big Number
+		.big-number {
+			margin-bottom: 4em;
+			display: block;
+			text-align: center;
+			width:100%;
+			font-size: 8em;
+			color:$lightgreen;
+			@include font-os(700);
+			&.high {color:$red;}
+			&.medium {color:$orange;}
+			&.low {}
+		}
+		// List
+		ol {
+			margin-left:$spacer * 4;
+			li {
+				font-size:1.25em;
+				margin-bottom: 1em;
+				span {
+					float:right;
+					width:auto;
+					position: relative;
+					top: -4px;
+					font-size:1.35em;
+					@include font-os(700);
+					@include responsive($ipadH){font-size:1.15em;line-height:1.5;}
+					@include responsive($ipadP){font-size:1.35em; line-height:1;}
+					&:after {
+						font-family:'Genericons';
+						content:'\f221';
+						margin-left:0.5em;
+					}
+					&:before {content:'';}
+				}
+				&:first-child span {color:$red;}
+				&:nth-child(2) span, &:nth-child(3) span {color:$orange;}
+				&:last-child span {color:$lightgreen;}
+			}
+		}
+		// Learn More links
+		a {
+			position:absolute;
+			bottom:$spacer * 5;
+			right:0;
+			left:0;
+			text-align:center;
+			text-decoration: none;
+			font-size:1.2em;
+			span {
+				$size: 10px;
+				font-size:$size;
+				width:$size;
+				height:$size;
+				position: relative;
+				top: 1px;
+				margin-left:3px;
+			}
+		}
+	}
+}

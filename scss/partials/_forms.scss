@@ -1,0 +1,60 @@
+// Forms
+#mc_embed_signup {
+	display:none;
+	position:fixed;
+	z-index:9999;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background:$extra-light-grey;
+	background:rgba(20,20,20,0.5);
+	&.active {display:block;}
+	form {
+		width:60%;
+		max-width: 450px;
+		background:white;
+		padding:($spacer * 2) $spacer $spacer;
+		box-shadow:2px 2px 2px 0 $grey;
+		position:relative;
+		top:30vh;
+		margin:0 auto;
+		font-size: 1.3em;
+		@include responsive($ipadH){top:40px;}
+		@include responsive($ipadP){
+			width:82%;
+			padding:($spacer * 2) 6% $spacer;
+		}
+		h4 {font-size:1.75em;}
+		label {
+			display: block;
+			margin-bottom: 0.3em;
+		}
+		input[type="text"], input[type="email"] {
+			width:98%;
+			-webkit-appearance: none;
+			box-shadow:none;
+			border:1px solid $grey;
+			margin-bottom: 1em;
+			padding:0.5em 0;
+			text-indent: 0.5em;
+			font-size: 1.3em;
+		}
+		input[type="submit"]{
+			-webkit-appearance: none;
+			border:none;
+			box-shadow:none;
+			float:right;
+			@extend .button;
+		}
+		.clear {@extend .cf;}
+		.genericon {
+			cursor:pointer;
+			position:absolute;
+			top:$spacer * 2;
+			right:$spacer;
+			color:$red;
+			font-size:1em;
+		}
+	}
+}

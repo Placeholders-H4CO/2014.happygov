@@ -1,0 +1,124 @@
+
+
+/* Links and Headers
+======================================================= */
+a {
+	color:$link-color;
+	@include ease;
+
+	&:focus, &:hover, &:active {outline: 0;}
+	&:hover {color:$link-hover-color;}
+}
+
+h1, h2, h3, h4, h5 {
+	margin-bottom:0.35em;
+	color:$headline-color;
+	letter-spacing:0.05em;
+	text-transform:uppercase;
+	@include font-os(700);
+}
+
+h1 {font-size:4.5em;}
+h2 {font-size:2.25em;}
+h3 {font-size:1.55em;}
+h4 {font-size:2.1em;}
+h5 {font-size:1em;}
+
+
+
+
+
+
+/* Main Body Styles
+======================================================= */
+body {
+	font-size:62.5%;
+	color:$body-copy-color;
+	@include font-os(300);
+}
+
+p {
+	line-height:1.4em;
+	font-size:1.2em;
+	margin-bottom:1em;
+}
+
+.wrapper {@extend .cf;}
+
+
+
+/* Header/Logo and Tagline
+======================================================= */
+header {}
+
+
+
+
+
+
+
+/* Content
+======================================================= */
+.content-wrapper {}
+
+
+
+
+
+
+
+/* Extras
+======================================================= */
+
+// Scroll to Top
+.go-top {
+	display: none;
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	padding: 1em 1em 0.75em 1em;
+	background-color: rgba(158,178,192,0.4);
+
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+}
+
+
+// FIrst & Last Overrides
+.first {margin-left:0 !important;}
+.last {margin-right:0 !important;}
+
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+
+/* Selection Colors
+======================================================= */
+::selection {
+	background:$highlight-bkgd-color;
+	color:$highlight-color;
+}
+
+::-moz-selection {
+	background:$highlight-bkgd-color;
+	color:$highlight-color;
+}

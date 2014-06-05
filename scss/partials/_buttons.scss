@@ -1,0 +1,29 @@
+// Buttons
+.button {
+	background:$blue;
+	border-radius:4px;
+	padding:0.9em 1.2em;
+	display:inline-block;
+	color:white;
+	text-decoration:none;
+	cursor:pointer;
+	text-transform:uppercase;
+	span {
+		$size:20px;
+		font-size:$size;
+		width:$size - 2px;
+		height:$size - 9px;
+		display: none;
+		position: relative;
+		top:-4px;
+	}
+	&:hover,
+	&.active {
+		background:$red;
+		color:white;
+	}
+	//&.btn span {display:inline-block;}
+	&.active {
+		span {display:inline-block;}
+	}
+}

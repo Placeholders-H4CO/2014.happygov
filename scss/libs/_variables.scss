@@ -1,0 +1,49 @@
+
+/* Colors
+================================================================================================= */
+$grey:#cbcbcb;
+$light-grey:lighten($grey, 10%);
+$dark-grey:darken($grey, 10%);
+$extra-light-grey:lighten($light-grey, 7%);
+$extra-dark-grey:darken($dark-grey, 8%);
+
+$blue:#409DCC;
+$dark-blue:darken($blue, 15%);
+$light-blue:lighten($blue, 10%);
+
+$red:#D12015;
+$yellow:#FDBC3E;
+$purple: #311258;
+
+//Map
+$red:#e74c3c;
+$orange:#f39c12;
+$yellow:#ffce00;
+$darkgreen:#1da052;
+$lightgreen:#2ecc71;
+
+
+$headline-color:$blue;//darken($dark-grey, 20%);
+$body-copy-color:$extra-dark-grey;
+
+$link-color:$dark-grey;
+$link-hover-color:$red;
+
+// Highlight Colors
+$highlight-color:white;
+$highlight-bkgd-color:$blue;
+
+
+
+/* Grid
+================================================================================================= */
+$spacer:1.5%;
+
+
+
+
+/* Responsive
+================================================================================================= */
+$ipadH: 1024px;
+$ipadP: 900px;
+$tabletP: 600px;

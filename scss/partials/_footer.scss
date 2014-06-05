@@ -1,0 +1,18 @@
+/* Footer
+======================================================= */
+footer {
+	background:$blue;
+	padding:$spacer;
+	color:white;
+	text-align:center;
+	p {margin-bottom:0;}
+	a {
+		text-decoration:none;
+		color:white;
+		span {
+			position:relative;
+			top:-1px;
+			margin-right:4px;
+		}
+	}
+}

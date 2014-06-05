@@ -1,0 +1,37 @@
+agency,case_status,count(agency)
+"Arts and Venues",Closed,1
+"Aviation - DIA",Closed,939
+"Aviation - DIA",Open,97
+"City Council",Closed,1
+"Clerk & Recorder",Closed,1343
+"Comm Plan & Dev",Closed,12450
+"Comm Plan & Dev",Open,2317
+"County Court",Closed,6
+"County Court",Open,1
+"Denver Art Museum",Closed,2
+"Denver Public Librar",Closed,1
+"Denver Water",Closed,3
+DPS,Closed,4
+"Economic Dev",Closed,2
+"Env Health",Closed,10234
+"Env Health",Open,1670
+Excise&License,Closed,377
+Excise&License,Open,9
+Finance,Closed,626
+Finance,Open,2
+"Human Resources(OHR)",Closed,5
+"Human Resources(OHR)",Open,3
+"Human Rights",Closed,1
+"Indep Monitor",Closed,3
+Law,Closed,2
+"Mayors Office",Closed,293
+"Mayors Office",Open,424
+"Parks and Rec",Closed,641
+"Parks and Rec",Open,57
+"Public Works",Closed,21122
+"Public Works",On-Hold,1
+"Public Works",Open,2444
+Safety,Closed,167
+Safety,Open,6
+"Tech Services",Closed,3469
+"Tech Services",Open,122

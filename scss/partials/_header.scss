@@ -1,0 +1,57 @@
+header {
+	padding:1.5em 2em;
+	background:white;//$light-grey;
+	@extend .cf;
+	@include responsive($ipadP) {text-align:center;}
+	img, nav {display:inline-block;}
+	img {
+		width:30%;
+		max-width:280px;
+		@include responsive($ipadP){width:280px;}
+	}
+	nav {
+		float:right;
+		text-align: right;
+		width:60%;
+		position:relative;
+		top:1.5em;
+		@include responsive($ipadP){
+			width:100%;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		a {
+			margin-left:$spacer * 2;
+			text-decoration: none;
+			text-transform: uppercase;
+			color:$dark-grey;
+			font-size:1.35em;
+			@include font-os(600);
+			&:first-child {
+				color:$red;
+				&:after {
+					content:'|';
+					margin-left: $spacer * 2;
+					color:$dark-grey;
+				}
+				span {
+					$size:20px;
+					font-size: $size;
+					width:$size;
+					height:$size;
+					position: relative;
+					top: 8px;
+					left: -4px;
+					@include responsive($ipadP) {
+						top:-4px;
+					}
+				}
+			}
+			//&:not(.button) {text-shadow:2px 2px 0 $dark-grey;}
+			//&:hover {text-shadow:none;}
+			&.button {
+				@include responsive($ipadP) {display:block;margin-top:20px;}
+			}
+		}
+	}
+}

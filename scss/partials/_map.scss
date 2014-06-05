@@ -1,0 +1,147 @@
+// Map
+#main {
+	display:none;
+	position:relative;
+	&.active {display:block;}
+	iframe { // Dev
+		width:100%;
+		pointer-events: none;
+	}
+	#heatmapArea {
+		position:relative;
+		float:left;
+		width:100%;
+	}
+	#configArea {
+		position:absolute;
+		right:$spacer;
+		top:18px;
+		width:180px;
+		padding:2em;
+		background:white;
+		background:rgba(255,255,255,0.9);
+		border:1px solid $light-grey;
+		h4 {
+			font-size:1.4em;
+			color:$body-copy-color;
+			span {
+				$size:20px;
+				font-size: $size;
+				width: $size - 1px;
+				height: $size;
+				position: relative;
+				top: -3px;
+			}
+		}
+		#infoToggle {
+			position:absolute;
+			top:14px;
+			right:$spacer * 4;
+			span {
+				cursor: pointer;
+				font-size:2.5em;
+				@include font-os(600);
+				&.open {display:none;}
+				&.closed {
+					color:$red;
+					//display:none;
+					position:relative;
+					top:2px;
+					font-size: 2em;
+				}
+			}
+			&.hide {
+				span.open {display:block;}
+				span.closed {display:none;}
+			}
+		}
+		&.hide {
+			padding-bottom:1em;
+			.btn {display:none;}
+		}
+	}
+	.btn {
+		margin-top:10px;
+		cursor:pointer;
+		width:86%;
+		text-align: center;
+		text-transform: uppercase;
+		@extend .button;
+	}
+	#map {
+		width:100%;
+	}
+	#LocateButton {
+		position: absolute;
+		top: 95px;
+		left: 20px;
+		z-index: 50;
+	}
+	#typeBox{
+		display:none;
+	}
+	.esriPopupWrapper {
+		border-radius:0;
+		box-shadow:none;
+		.pointer, .outerPointer {display:none;}
+		#map_graphics_layer {
+			path {fill:$darkgreen;}
+		}
+		.sizer {
+			.titlePane {
+				background:$blue;
+				border-radius:0;
+				padding:0.5em;
+				text-transform: uppercase;
+				@include font-os(600);
+				.titleButton {
+					margin-right:5px;
+					&.maximize {top:10px;}
+					&.close {top:7px;}
+				}
+			}
+			&.content {
+				color:$body-copy-color;
+				.contentPane {line-height:1.5em;}
+				b {
+					font-size: 1.25em;
+					color:$headline-color;
+				}
+				p {
+					color:$body-copy-color;
+					margin-bottom: 10px;
+
+					@include font-os(600);
+					.genericon {
+						$size:22px;
+						font-size: $size;
+						width: $size;
+						height: $size;
+						position: relative;
+						top: -3px;
+						&:hover {color:$lightgreen;}
+					}
+				}
+			}
+		}
+		.actionsPane {
+			border-radius:0;
+			.actionList {
+				margin-bottom:10px;
+				color:$red;
+				@include font-os(600);
+			}
+		}
+	}
+}
+
+#ninjaWrap {
+		position:absolute;
+		//top:0;
+		//bottom:0;
+		width:100%;
+		background:black;
+		opacity:0;
+		z-index: 9998;
+		//display: none;
+}

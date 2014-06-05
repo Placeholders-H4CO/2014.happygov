@@ -1,0 +1,41 @@
+// Auto Fit Images
+@mixin cover-image {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
+// Retina CSS Images
+@mixin retina-background ($url, $file-type, $width: auto, $repeat: no-repeat, $position: center, $ratio: 1.5, $suffix: "@2x") {
+    background: url($url + "." + $file-type) $repeat $position;
+    background-size:cover;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+        only screen and (min--moz-device-pixel-ratio: $ratio),
+        only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+        only screen and (min-resolution: #{round($ratio*96)}dpi),
+        only screen and (min-resolution: #{$ratio}dppx) {
+        background: url($url + $suffix + "." + $file-type) $repeat $position;
+        background-size:cover;
+    }
+}
+
+
+
+/* Transition Times
+================================================================================================= */
+
+@mixin ease($time:333ms) {
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	-ms-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+
+@mixin responsive($size) {
+  @media all and (max-width: $size) {@content;}
+}

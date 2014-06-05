@@ -1,0 +1,29 @@
+// List
+#list {
+	display:none;
+	&.active {display:block;}
+	section {
+		margin:40px auto 0;
+		h2 {
+			margin-bottom:1em;
+			margin-left:$spacer;
+			margin-right:$spacer;
+			background:$extra-light-grey;
+			padding:0.5em;
+			@include responsive($ipadP){font-size:2em;}
+			span {
+				float: right;
+				font-size: 1.4em;
+				margin-right: 0.5em;
+				position: relative;
+				top: -2px;
+				@include responsive($tabletP){display:none;}
+			}
+		}
+	}
+	.c3 {
+		svg {
+			transform: scale(0.92);
+		}
+	}
+}

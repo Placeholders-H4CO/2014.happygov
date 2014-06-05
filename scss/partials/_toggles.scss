@@ -1,0 +1,27 @@
+// Toggle Bar
+#toggle {
+	@extend .cf;
+	a {
+		width:50%;
+		float:left;
+		padding:1.5em 0;
+		background: $light-grey;
+		text-align:center;
+		color:$dark-grey;
+		font-size:1.6em;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		@include font-os(700);
+		&.active {
+			background: $blue;
+			color:white;
+			text-shadow:2px 2px 0 $dark-blue;
+		}
+	}
+	&.sticky {
+		position: fixed;
+		left:0;
+		right:0;
+		top:180px;
+	}
+}

@@ -1,0 +1,9 @@
+//-- Open Sans --//
+
+@mixin font-os($weight:400, $style:normal) {
+	font-family:'Open Sans', sans-serif;
+	font-weight: $weight;
+	font-style:$style;
+}
+
+

@@ -1,0 +1,34 @@
+// Admin
+#admin {
+	background:$red;
+	padding:0.75em 1em;
+	color:white;
+	box-shadow:inset 0 -2px 2px 0 darken($red, 15%);
+	@extend .cf;
+	p {
+		margin-bottom: 0;
+		@include font-os(600);
+		span {
+			&:not(.genericon) {
+				@include responsive($ipadP) {display:none;}
+			}
+			&.genericon-cog {float:right;}
+			a {
+				margin-left:$spacer;
+				display: inline-block;
+				color:white;
+				opacity: 0.5;
+				cursor: pointer;
+				@include font-os(400);
+				&:hover {
+					color:white;
+					opacity: 1;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	body#home & {display:none;}
+}
+
+
